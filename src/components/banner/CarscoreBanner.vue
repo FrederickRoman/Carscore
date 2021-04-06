@@ -1,5 +1,5 @@
 <template>
-  <v-parallax dark height="300" src="@/assets/hero-banner.webp">
+  <v-parallax dark height="300" src="@/assets/img/hero-banner.webp">
     <v-row align="center" justify="center">
       <v-col cols="12" class="text-center" id="carscore-main_header-container">
         <h1 class="display-2 font-weight-bold mb-4">Carscore</h1>

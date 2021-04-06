@@ -5,11 +5,6 @@
       <div>
         <div class="d-flex justify-center align-center ma-10">
           <div>
-            <!-- <p>Get unlimited custom lists for free.</p>
-            <p>
-              Customize the number of syllables per word, rule out actual words,
-              chnage export format, and more.
-            </p> -->
             <CarscoreMainForm />
           </div>
         </div>
