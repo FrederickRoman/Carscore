@@ -1,0 +1,37 @@
+<template>
+  <v-list-item-group v-model="group">
+    <v-list-item v-for="item in items" :key="item.title" link>
+      <v-list-item-icon>
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-list-item-icon>
+      <v-list-item-content>
+        <v-list-item-title>{{ item.title }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+  </v-list-item-group>
+</template>
+
+<script>
+const NAV_ITEMS = Object.freeze([
+  { title: "Settings", icon: "mdi-cog" },
+  { title: "About", icon: "mdi-help-box" },
+]);
+
+export default {
+  data: () => ({
+    group: null,
+  }),
+  watch: {
+    group(curState) {
+      if (curState !== null) {
+        this.$emit("set-drawer", false);
+        this.group = null;
+      }
+    },
+  },
+  created() {
+    this.items = NAV_ITEMS;
+  },
+};
+</script>
+

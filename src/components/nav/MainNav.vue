@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import MainAppBar from "./MainAppBar";
-import MainAppDrawer from "./MainAppDrawer";
+import MainAppBar from "./bar/MainAppBar";
+import MainAppDrawer from "./drawer/MainAppDrawer";
 
 export default {
   name: "MainNav",

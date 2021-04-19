@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import BannerHeader from "./BannerHeader";
-import BannerSubheader from "./BannerSubheader";
+import BannerHeader from "./header/BannerHeader";
+import BannerSubheader from "./subheader/BannerSubheader";
 
 export default {
   components: {

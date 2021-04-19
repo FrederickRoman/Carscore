@@ -5,9 +5,9 @@
       max-height="40"
       max-width="40"
       src="@/assets/img/carscoreMetalLogo.svg"
-    ></v-img>
+    />
     <v-toolbar-title class="carscore_brand-font">Carscore</v-toolbar-title>
-    <v-spacer></v-spacer>
+    <v-spacer />
     <v-btn
       fab
       small
