@@ -1,0 +1,10 @@
+$carscore_fontStack: "Orbitron", "Times New Roman", Times, serif;
+
+@mixin carscore_fontStack {
+    font-family: $carscore_fontStack;
+}
+
+@mixin logo_text{
+  @include carscore_fontStack;
+  text-shadow: 0 0 3px gray, 0 0 5px black;
+}

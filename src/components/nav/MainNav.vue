@@ -87,10 +87,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
+@use '@/styles/fonts/_fonts.scss';
+
 .carscore_brand-font {
-  font-family: "Orbitron", "Times New Roman", Times, serif;
-  text-shadow: 0 0 3px gray, 0 0 5px black;
-  /* padding: 0px 5px; */
+  @include fonts.logo_text;
 }
 </style>
