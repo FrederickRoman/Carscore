@@ -1,18 +1,18 @@
 <template>
   <div>
     <BannerSection />
-    <CarscoreDescriptionSection />
+    <ScoreSection />
   </div>
 </template>
 
 <script>
 import BannerSection from "@/components/banner/BannerSection";
-import CarscoreDescriptionSection from "@/components/content/CarscoreDescriptionSection";
+import ScoreSection from "@/components/score/ScoreSection";
 
 export default {
   components: {
     BannerSection,
-    CarscoreDescriptionSection,
+    ScoreSection,
   },
 };
 </script>
