@@ -28,20 +28,11 @@
 
 <script>
 import attrs from "@/assets/data/carEvalAttrsSchema";
-
-// const DEFAULT_SELECTION = {
-//   buying: "low",
-//   maint: "low",
-//   doors: "5more",
-//   persons: "more",
-//   lug_boot: "big",
-//   safety: "high",
-// };
+import { mapActions } from "vuex";
 
 export default {
   data: () => ({
     valid: false,
-    // nameRules: [(v) => !!v || "Name is required"],
     select: {
       buying: "",
       maint: "",
@@ -51,11 +42,25 @@ export default {
       safety: "",
     },
   }),
+  watch: {
+    select: {
+      deep: true,
+      async handler() {
+        try {
+          await this.fetchScore();
+        } catch (error) {
+          console.log(error);
+        }
+      },
+    },
+  },
   created() {
-    // this.select = DEFAULT_SELECTION;
     this.entries = attrs;
   },
   methods: {
+    ...mapActions({
+      fetchScore: "FETCH_SCORE",
+    }),
     RequireRule(formEntry) {
       return [(v) => !!v || `${formEntry} is required`];
     },

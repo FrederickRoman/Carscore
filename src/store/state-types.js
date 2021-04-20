@@ -1,0 +1,1 @@
+export const SCORE_STATE = Object.freeze([0, 1, 2, 3]);
