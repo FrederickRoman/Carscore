@@ -12,9 +12,6 @@ export default {
   components: {
     StarsSection,
   },
-  // data: () => ({
-  //   score: 2,
-  // }),
   computed: {
     ...mapGetters(["score"]),
   },

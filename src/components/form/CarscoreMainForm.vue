@@ -28,7 +28,7 @@
 
 <script>
 import attrs from "@/assets/data/carEvalAttrsSchema";
-import { mapActions } from "vuex";
+import { mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
   data: () => ({
@@ -42,25 +42,32 @@ export default {
       safety: "",
     },
   }),
+  computed: {
+    ...mapGetters(["initCar", "car"]),
+    filledOut() {
+      const formEntries = Object.entries(this.select);
+      const valueIsFilledOut = ([, formEntryValue]) => formEntryValue !== "";
+      return formEntries.every(valueIsFilledOut);
+    },
+  },
   watch: {
     select: {
       deep: true,
-      async handler() {
-        try {
-          await this.fetchScore();
-        } catch (error) {
-          console.log(error);
+      async handler(curSelect) {
+        if (this.filledOut) {
+          this.setCar(curSelect);
+          await this.fetchScore(this.car);
         }
       },
     },
   },
   created() {
     this.entries = attrs;
+    this.select = { ...this.select, ...this.initCar };
   },
   methods: {
-    ...mapActions({
-      fetchScore: "FETCH_SCORE",
-    }),
+    ...mapMutations({ setCar: "SET_CAR" }),
+    ...mapActions({ fetchScore: "FETCH_SCORE" }),
     RequireRule(formEntry) {
       return [(v) => !!v || `${formEntry} is required`];
     },
