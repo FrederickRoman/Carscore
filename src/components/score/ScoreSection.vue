@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import IntroSection from "./IntroSection";
-import FormSection from "./FormSection";
+import IntroSection from "./introText/IntroSection";
+import FormSection from "./scoringIO/FormSection";
 
 export default {
   components: {
