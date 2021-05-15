@@ -1,3 +1,5 @@
+import axios from "axios";
+
 import { SCORE_STATE } from '@/store/state-types.js';
 import { SET_SCORE } from '@/store/mutation-types.js';
 import { FETCH_SCORE } from '@/store/action-types.js';
@@ -30,12 +32,14 @@ export default {
             state.score = SCORE_STATE[payload],
     },
     actions: {
-        [FETCH_SCORE]: async ({ commit },payload) => {
+        [FETCH_SCORE]: async ({ commit }, payload) => {
             try {
                 // console.log(getters.car)
                 console.log(payload)
-                const scoreStub = Math.floor(Math.random() * 4);
-                commit(SET_SCORE, scoreStub);
+                const URL = 'api/score'
+                const data = {car:payload};
+                const score = await axios.post(URL,data);
+                commit(SET_SCORE, score);
             } catch (error) {
                 console.log(error);
             }
