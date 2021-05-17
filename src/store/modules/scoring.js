@@ -37,8 +37,9 @@ export default {
                 // console.log(getters.car)
                 console.log(payload)
                 const URL = 'api/score'
-                const data = {car:payload};
-                const score = await axios.post(URL,data);
+                const data = { car: payload };
+                const { score } = await (await axios.post(URL, data)).data;
+                console.log('score', score)
                 commit(SET_SCORE, score);
             } catch (error) {
                 console.log(error);
