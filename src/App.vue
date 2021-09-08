@@ -2,7 +2,9 @@
   <v-app>
     <MainNav />
     <v-main>
-      <router-view />
+      <v-scroll-x-transition mode="out-in" :hide-on-leave="true">
+        <router-view />
+      </v-scroll-x-transition>
     </v-main>
   </v-app>
 </template>
