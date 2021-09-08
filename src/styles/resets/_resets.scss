@@ -1,0 +1,4 @@
+@mixin link_styling($color: white) {
+  color: $color;
+  text-decoration: none;
+}

@@ -1,12 +1,21 @@
 <template>
   <v-app-bar app>
-    <v-img
-      lazy-src="@/assets/img/carscoreLazyLogo.png"
-      max-height="40"
-      max-width="40"
-      src="@/assets/img/carscoreMetalLogo.svg"
-    />
-    <v-toolbar-title class="carscore_brand-font">Carscore</v-toolbar-title>
+    <router-link to="/" id="app-bar_home-link">
+      <span class="d-flex">
+        <v-img
+          lazy-src="@/assets/img/carscoreLazyLogo.png"
+          max-height="40"
+          max-width="40"
+          src="@/assets/img/carscoreMetalLogo.svg"
+        />
+        <v-toolbar-title
+          class="carscore_brand-font"
+          id="app-bar_home-link_title"
+        >
+          Carscore
+        </v-toolbar-title>
+      </span>
+    </router-link>
     <v-spacer />
     <v-btn
       fab
@@ -34,8 +43,17 @@ export default {
 
 <style lang="scss" scoped>
 @use '@/styles/fonts/_fonts.scss';
+@use '@/styles/resets/_resets.scss';
 
 .carscore_brand-font {
   @include fonts.logo_text;
+}
+
+#app-bar_home-link {
+  @include resets.link_styling;
+  &_title {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
 }
 </style>

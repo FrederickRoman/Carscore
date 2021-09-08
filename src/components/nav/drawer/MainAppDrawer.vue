@@ -1,5 +1,10 @@
 <template>
-  <v-navigation-drawer app v-model="drawer" bottom>
+  <v-navigation-drawer
+    v-model="drawer"
+    v-click-outside="closeDrawer"
+    app
+    bottom
+  >
     <DrawerBrandLi />
     <v-divider />
     <DrawerNavList v-bind="$attrs" v-on="$listeners" />
@@ -33,6 +38,11 @@ export default {
     },
     drawer(drawer) {
       this.$emit("set-drawer", drawer);
+    },
+  },
+  methods: {
+    closeDrawer() {
+      if (!this.openDrawer) this.$emit("set-drawer", false);
     },
   },
 };

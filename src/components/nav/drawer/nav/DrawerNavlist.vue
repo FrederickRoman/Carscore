@@ -1,6 +1,6 @@
 <template>
   <v-list-item-group v-model="group">
-    <v-list-item v-for="item in items" :key="item.title" link>
+    <v-list-item v-for="item in items" :key="item.title" :to="item.link" link>
       <v-list-item-icon>
         <v-icon>{{ item.icon }}</v-icon>
       </v-list-item-icon>
@@ -13,8 +13,9 @@
 
 <script>
 const NAV_ITEMS = Object.freeze([
-  { title: "Settings", icon: "mdi-cog" },
-  { title: "About", icon: "mdi-help-box" },
+  { title: "API", icon: "mdi-dns", link: "/comingSoon" },
+  { title: "About", icon: "mdi-help-box", link: "/about" },
+  { title: "Contact", icon: "mdi-card-account-mail", link: "/comingSoon" },
 ]);
 
 export default {

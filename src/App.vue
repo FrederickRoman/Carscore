@@ -2,7 +2,7 @@
   <v-app>
     <MainNav />
     <v-main>
-      <Home />
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -10,11 +10,11 @@
 <script>
 import MainNav from "./components/nav/MainNav";
 // import HeroBanner from "./components/banner/HeroBanner";
-import Home from "./pages/Home";
+// import Home from "./views/Home";
 
 export default {
   name: "App",
-  components: { MainNav, Home },
+  components: { MainNav },
   data: () => ({
     // drawer: false,
     // group: null,
