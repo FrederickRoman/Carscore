@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "nodemon ./server/server.js"
+    "dev": "nodemon ./server/server.js",
+    "start": "npm run build && npm rebuild @tensorflow/tfjs-node --build-addon-from-source && nodemon ./server/server.js "
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "^3.6.1",
@@ -15,6 +16,7 @@
     "core-js": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "lodash": "^4.17.21",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "vue": "^2.6.11",
