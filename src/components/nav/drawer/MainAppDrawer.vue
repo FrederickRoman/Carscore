@@ -1,7 +1,7 @@
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    v-click-outside="closeDrawer"
+ 
     app
     bottom
   >
@@ -40,11 +40,7 @@ export default {
       this.$emit("set-drawer", drawer);
     },
   },
-  methods: {
-    closeDrawer() {
-      if (!this.openDrawer) this.$emit("set-drawer", false);
-    },
-  },
+  
 };
 </script>
 
