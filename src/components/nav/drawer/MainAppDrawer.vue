@@ -1,10 +1,5 @@
 <template>
-  <v-navigation-drawer
-    v-model="drawer"
- 
-    app
-    bottom
-  >
+  <v-navigation-drawer v-model="drawer" app bottom temporary>
     <DrawerBrandLi />
     <v-divider />
     <DrawerNavList v-bind="$attrs" v-on="$listeners" />
@@ -40,7 +35,6 @@ export default {
       this.$emit("set-drawer", drawer);
     },
   },
-  
 };
 </script>
 

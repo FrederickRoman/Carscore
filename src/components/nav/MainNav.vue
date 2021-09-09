@@ -1,5 +1,5 @@
 <template>
-  <nav v-click-outside="closeDrawer">
+  <nav>
     <MainAppBar @toggle-drawer="toggleDrawer" />
     <MainAppDrawer :openDrawer="openDrawer" @set-drawer="setDrawer" />
   </nav>
@@ -24,10 +24,7 @@ export default {
     },
     setDrawer(drawer) {
       this.openDrawer = drawer;
-    },
-    closeDrawer() {
-      this.openDrawer = false;
-    },
+    }
   },
 };
 </script>
