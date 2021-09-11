@@ -23,6 +23,7 @@
       depressed
       outlined
       color="anchor"
+      aria-label="menu"
       class="mx-3"
       @click="toggleDrawer"
     >

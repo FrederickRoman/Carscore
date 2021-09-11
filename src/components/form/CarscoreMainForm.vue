@@ -19,8 +19,8 @@
             outlined
           ></v-select>
         </v-col>
-        <pre> {{ select }}</pre>
-        <pre> {{ valid }}</pre>
+        <!-- <pre> {{ select }}</pre>
+        <pre> {{ valid }}</pre> -->
       </v-row>
     </v-container>
   </v-form>

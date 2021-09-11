@@ -1,16 +1,18 @@
 <template>
-  <h1 class="d-flex justify-center align-center mx-6">
-    <Star v-for="star in stars" :filled="star.filled" :key="star.id" />
-  </h1>
+  <v-rating
+    v-model="score"
+    dense
+    readonly
+    color="yellow"
+    background-color="yellow lighten-3"
+    size="80"
+    :length="maxScore"
+  >
+  </v-rating>
 </template>
 
 <script>
-import Star from "./Star";
-
 export default {
-  components: {
-    Star,
-  },
   props: {
     score: {
       type: Number,
