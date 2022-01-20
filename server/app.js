@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const compression = require("compression");
 const cors = require("cors");
 const apiRouter = require("./api/routes/indexRouter");
-const buildDirectory = path.join(__dirname, "../dist");
+const buildDirectory = path.join(__dirname, "../client/dist");
 const serveStatic = express.static(buildDirectory);
 
 app

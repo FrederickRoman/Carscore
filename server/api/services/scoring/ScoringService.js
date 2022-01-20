@@ -1,6 +1,6 @@
 const tf = require("@tensorflow/tfjs-node");
-const encoding = require("./neuralNet/encoding")
-const MODEL_DIRECTORY = "file://./server/api/services/scoring/neuralNet/carscoreNN/model.json";
+const encoding = require("./neuralNet/encoding");
+const MODEL_DIRECTORY = "file://./api/services/scoring/neuralNet/carscoreNN/model.json";
 
 class Preprocessing {
   static car2vec(car) {
@@ -13,7 +13,7 @@ class Preprocessing {
 
 class Postprocessing {
   static vec2score(outputVec) {
-    const getIndexOfMax = arr => arr.indexOf(Math.max(...arr));
+    const getIndexOfMax = (arr) => arr.indexOf(Math.max(...arr));
     return getIndexOfMax(outputVec);
   }
 }
@@ -27,13 +27,12 @@ class ScoringService {
       const model = await tf.loadLayersModel(MODEL_DIRECTORY);
       const outputPredictionTensor = model.predict(inputFeaturesTensor);
       const outputPredictionVector = await outputPredictionTensor.data();
-      const score = Postprocessing.vec2score(outputPredictionVector)
+      const score = Postprocessing.vec2score(outputPredictionVector);
       return score;
     } catch (error) {
-      console.log("cwd",  process.cwd())
-      console.log(error)
+      console.log("cwd", process.cwd());
+      console.log(error);
     }
-
   }
 }
 

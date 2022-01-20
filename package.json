@@ -3,42 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "dev": "nodemon ./server/server.js",
-    "postinstall": "npm run build && npm rebuild @tensorflow/tfjs-node --build-addon-from-source",
-    "start": "nodemon ./server/server.js "
+    "install": "cd client && npm install && cd ../server && npm install && cd ..",
+    "client_serve": "cd client && vue-cli-service serve && cd ..",
+    "client_build": "cd server && vue-cli-service build && cd ..",
+    "client_lint": "cd client && vue-cli-service lint && cd ..",
+    "server_dev": "cd server && nodemon ./server/server.js && cd ..",
+    "postinstall": "cd client && npm run build && cd ../server && npm run build && cd ..",
+    "start": "cd server && cross-env NODE_ENV=production npm run start && cd .."
   },
   "dependencies": {
-    "@tensorflow/tfjs-node": "^3.6.1",
-    "axios": "^0.21.1",
-    "compression": "^1.7.4",
-    "core-js": "^3.6.5",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "lodash": "^4.17.21",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.7",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuetify": "^2.4.0",
-    "vuex": "^3.6.2"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^5.0.0",
-    "sass": "^1.32.0",
-    "sass-loader": "^10.1.1",
-    "vue-cli-plugin-vuetify": "~2.3.1",
-    "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0"
+    "cross-env": "^7.0.3"
   },
   "eslintConfig": {
     "root": true,
@@ -46,7 +20,6 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
       "eslint:recommended"
     ],
     "parserOptions": {

@@ -1,0 +1,48 @@
+{
+  "name": "carscore",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon ./server/server.js",
+    "build": "npm rebuild @tensorflow/tfjs-node --build-addon-from-source",
+    "start": "node server.js "
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^3.6.1",
+    "axios": "^0.21.1",
+    "compression": "^1.7.4",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  }
+}
