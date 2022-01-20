@@ -33,7 +33,7 @@ export default {
     [FETCH_SCORE]: async ({ commit }, payload) => {
       try {
         // console.log(getters.car)
-        console.log(payload);
+        // console.log(payload);
         const URL = "api/score";
         const data = { car: payload };
         const { score } = await (await axios.post(URL, data)).data;
