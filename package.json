@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "install": "cd client && npm install && cd ../server && npm install && cd ..",
-    "client_serve": "cd client && vue-cli-service serve && cd ..",
+    "client_dev": "cd client && vue-cli-service serve && cd ..",
     "client_build": "cd server && vue-cli-service build && cd ..",
     "client_lint": "cd client && vue-cli-service lint && cd ..",
     "server_dev": "cd server && nodemon ./server/server.js && cd ..",
