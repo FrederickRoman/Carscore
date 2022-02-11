@@ -7,7 +7,9 @@
 
 This is a scoring system that uses a neural network train on [UCI car evaluation dataset](https://archive.ics.uci.edu/ml/datasets/car+evaluation). This neural net runs on the back-end and send its response through a REST API.
 
-<div style="display:flex; flex-direction:column;"><img src="https://github.com/FrederickRoman/Carscore/blob/main/docs/mockups/Homepage_mobile.png" alt="Carscore home page mockup"/>
+<div style="display:flex; justify-content:center; align-items:center;">
+    <img src="https://github.com/FrederickRoman/Carscore/blob/main/docs/mockups/Homepage_mobile.png" height="300" alt="Carscore home page mobile mockup"/>
+    <img src="https://github.com/FrederickRoman/Carscore/blob/main/docs/mockups/Homepage_desktop.png" height="300" alt="Carscore home page desktop mockup"/>
 </div>
 
 ## Live website
