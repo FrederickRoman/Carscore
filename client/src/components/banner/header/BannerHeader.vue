@@ -1,4 +1,5 @@
 <template>
+<!-- Shows Carscore brand logo and name -->
   <h1 class="display-2 font-weight-bold mb-4">
     <v-row align="center" justify="center">
       <v-img

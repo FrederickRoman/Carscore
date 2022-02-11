@@ -1,6 +1,8 @@
 <template>
+  <!-- Carscore brand list item shown on the drawer -->
   <v-list-item>
     <v-list-item-content>
+      <!-- Carscore logo -->
       <v-list-item-title>
         <v-row align="center" justify="center">
           <v-col cols="2" class="pr-0">
@@ -16,6 +18,7 @@
           </v-col>
         </v-row>
       </v-list-item-title>
+      <!-- Carscore description -->
       <v-list-item-subtitle> ML-driven car score system </v-list-item-subtitle>
     </v-list-item-content>
   </v-list-item>
@@ -23,7 +26,7 @@
 
 
 <style lang="scss" scoped>
-@use '@/styles/fonts/_fonts.scss';
+@use "@/styles/fonts/_fonts.scss";
 
 .carscore_brand-font {
   @include fonts.logo_text;

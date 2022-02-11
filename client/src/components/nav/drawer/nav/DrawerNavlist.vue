@@ -12,6 +12,9 @@
 </template>
 
 <script>
+/**
+ * Shows nav links to the main pages of the website.
+ */
 const NAV_ITEMS = Object.freeze([
   { title: "API", icon: "mdi-dns", link: "/comingSoon" },
   { title: "About", icon: "mdi-help-box", link: "/about" },
@@ -19,9 +22,7 @@ const NAV_ITEMS = Object.freeze([
 ]);
 
 export default {
-  data: () => ({
-    group: null,
-  }),
+  data: () => ({ group: null }),
   watch: {
     group(curState) {
       if (curState !== null) {

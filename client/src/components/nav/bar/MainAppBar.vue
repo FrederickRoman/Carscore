@@ -1,5 +1,6 @@
 <template>
   <v-app-bar app>
+    <!-- Logo home button -->
     <router-link to="/" id="app-bar_home-link">
       <span class="d-flex">
         <v-img
@@ -17,6 +18,7 @@
       </span>
     </router-link>
     <v-spacer />
+    <!-- Main menu button -->
     <v-btn
       fab
       small
@@ -33,6 +35,10 @@
 </template>
 
 <script>
+/**
+ * It shows top app bar with home btn on the left and menu btn on the right.
+ * The menu btn opens the drawer.
+ */
 export default {
   methods: {
     toggleDrawer() {

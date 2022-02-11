@@ -23,14 +23,14 @@
 </template>
 
 <script>
+/**
+ * Shows both the input form and the output stars of car scoring.
+ */
 import CarscoreMainForm from "@/components/form/CarscoreMainForm";
 import ResultStars from "./ResultStars";
 
 export default {
-  components: {
-    CarscoreMainForm,
-    ResultStars,
-  },
+  components: { CarscoreMainForm, ResultStars },
   data: () => ({
     isActive: false,
     lazyOptions: { threshold: 0.3 },

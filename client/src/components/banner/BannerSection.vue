@@ -10,6 +10,9 @@
 </template>
 
 <script>
+/**
+ * Shows banner shown on landing page.
+ */
 import BannerHeader from "./header/BannerHeader";
 import BannerSubheader from "./subheader/BannerSubheader";
 

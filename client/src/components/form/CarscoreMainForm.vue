@@ -17,18 +17,22 @@
             required
             filled
             outlined
-          ></v-select>
+          />
         </v-col>
-        <!-- <pre> {{ select }}</pre>
-        <pre> {{ valid }}</pre> -->
       </v-row>
     </v-container>
   </v-form>
 </template>
 
 <script>
-import attrs from "@/assets/data/carEvalAttrsSchema";
+/**
+ * It shows the main form that collects the info on the car.
+ * If the info is invalid, it shows an error message.
+ * Once the form is properly filled out, its info is sent out to the store
+ * to be processed by the back-end.
+ */
 import { mapGetters, mapMutations, mapActions } from "vuex";
+import attrs from "@/assets/data/carEvalAttrsSchema";
 
 export default {
   data: () => ({

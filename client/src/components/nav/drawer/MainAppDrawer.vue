@@ -7,23 +7,21 @@
 </template>
 
 <script>
+/**
+ * Shows the main pages of the website in a side drawer.
+ */
 import DrawerBrandLi from "./branding/DrawerBrandLi";
 import DrawerNavList from "./nav/DrawerNavlist";
 
 export default {
-  components: {
-    DrawerBrandLi,
-    DrawerNavList,
-  },
+  components: { DrawerBrandLi, DrawerNavList },
   props: {
     openDrawer: {
       type: Boolean,
       required: true,
     },
   },
-  data: () => ({
-    drawer: false,
-  }),
+  data: () => ({ drawer: false }),
   watch: {
     openDrawer: {
       immediate: true,

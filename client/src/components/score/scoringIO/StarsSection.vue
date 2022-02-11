@@ -11,6 +11,9 @@
 </template>
 
 <script>
+/**
+ * Shows score [0,3] as rating stars.
+ */
 export default {
   props: {
     score: {

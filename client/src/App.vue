@@ -11,22 +11,17 @@
 </template>
 
 <script>
+/**
+ * It shows the main structure of the Carscore app; 
+ * it has a top nav bar, a middle main router view section and a bottom footer.
+ * 
+ * @author Frederick Roman
+ */
 import MainFooter from "./components/footer/MainFooter.vue";
 import MainNav from "./components/nav/MainNav";
-// import HeroBanner from "./components/banner/HeroBanner";
-// import Home from "./views/Home";
 
 export default {
   name: "App",
   components: { MainNav, MainFooter },
-  data: () => ({
-    // drawer: false,
-    // group: null,
-  }),
-  watch: {
-    // group() {
-    //   this.drawer = false;
-    // },
-  },
 };
 </script>

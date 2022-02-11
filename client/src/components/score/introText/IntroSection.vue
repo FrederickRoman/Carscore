@@ -26,6 +26,9 @@
 
 
 <script>
+/**
+ * It briefly introduces Carcore app.
+ */
 export default {
   data: () => ({
     isActive: false,

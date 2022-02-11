@@ -11,15 +11,15 @@
 </template>
 
 <script>
+/**
+ * Shows App footer with copyright notice and year.
+ */
 import ExtLink from "@/components/link/ExtLink";
 
+const DEFAULT_YEAR = 2022;
 export default {
-  components: {
-    ExtLink,
-  },
-  data: () => ({
-    curYear: "",
-  }),
+  components: { ExtLink },
+  data: () => ({ curYear: DEFAULT_YEAR }),
   created() {
     this.curYear = new Date().getFullYear();
   },
