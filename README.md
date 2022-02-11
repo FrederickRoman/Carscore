@@ -62,3 +62,10 @@ npm run client_lint
 ```
 npm run server_train_nn
 ```
+
+### Citation (Data)
+
+(a) Creator: Marko Bohanec
+(b) Donors: Marko Bohanec   (marko.bohanec@ijs.si)
+               Blaz Zupan      (blaz.zupan@ijs.si)
+(c) Date: June, 1997
