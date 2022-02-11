@@ -5,10 +5,9 @@
     readonly
     color="yellow"
     background-color="yellow lighten-3"
-    size="80"
+    :size="size"
     :length="maxScore"
-  >
-  </v-rating>
+  />
 </template>
 
 <script>
@@ -22,6 +21,10 @@ export default {
       type: Number,
       required: true,
     },
+    size:{
+      type: Number,
+      default: 80
+    }
   },
   computed: {
     maxScorefalsesPad() {
