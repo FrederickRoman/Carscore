@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "install": "cd client && npm install && cd ../server && npm install && cd ..",
-    "client_dev": "cd client && vue-cli-service serve && cd ..",
-    "client_build": "cd server && vue-cli-service build && cd ..",
-    "client_lint": "cd client && vue-cli-service lint && cd ..",
+    "client_dev": "cd client && npm run serve && cd ..",
+    "client_build": "cd server && npm run build && cd ..",
+    "client_lint": "cd client && npm run lint && cd ..",
     "server_dev": "cd server && nodemon ./server/server.js && cd ..",
     "server_train_nn": "cd server/api/services/scoring/neuralNet && node train && cd ../../../../..",
     "postinstall": "cd client && npm run build && cd ../server && npm run build && cd ..",
