@@ -1,8 +1,7 @@
 <template >
   <main class="d-lg-flex">
-    <v-divider class="mb-6" />
     <IntroSection />
-    <v-divider class="mb-6" />
+     <v-divider class="mb-6" color="#fff4e7" />
     <FormSection />
   </main>
 </template>

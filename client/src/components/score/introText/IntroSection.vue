@@ -9,7 +9,7 @@
       <header class="d-flex justify-center align-center mx-4 mb-6">
         <h1 class="text-center">Car resell scoring within seconds</h1>
       </header>
-      <v-divider></v-divider>
+      <v-divider class="mb-6" color="#fff4e7" />
       <section class="ma-10">
         <header><h2>How does it work?</h2></header>
         <div>
