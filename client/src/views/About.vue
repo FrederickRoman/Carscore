@@ -1,13 +1,13 @@
 <template>
   <section>
     <h1 class="d-flex justify-center align-center mx-6 my-6">About</h1>
-    <div class="d-lg-flex">
+    <section class="d-lg-flex">
       <div class="">
-        <div class="d-flex mx-4 mb-6">
+        <header class="d-flex mx-4 mb-6">
           <h2 class="d-flex justify-center align-center mx-6">
             What is this for?
           </h2>
-        </div>
+        </header>
         <div class="ma-10">
           <p>
             Carscore is a car classifier distributed through its public API.
@@ -25,15 +25,15 @@
           </p>
         </div>
       </div>
-    </div>
-    <v-divider class="mb-6" color="#fff4e7"></v-divider>
-    <div class="d-lg-flex">
+    </section>
+    <v-divider class="mb-6" color="#fff4e7" />
+    <section class="d-lg-flex">
       <div class="">
-        <div class="d-flex mx-4 mb-6">
+        <header class="d-flex mx-4 mb-6">
           <h2 class="d-flex justify-center align-center mx-6">
             How does it work?
           </h2>
-        </div>
+        </header>
         <div class="ma-10">
           <div>
             <p>
@@ -62,17 +62,20 @@
               </ExtLink>
             </p>
           </div>
-          <figure
-            class="d-flex flex-column justify-center align-center mx-6 my-10"
-          >
-            <v-img
-              max-width="300"
-              src="@/assets/img/hero-banner.webp"
-            />
-          </figure>
+          <div class="d-sm-flex justify-center align-center">
+            <figure class="d-flex justify-center align-center">
+              <v-img max-width="200" src="@/assets/img/hero-banner.webp" />
+            </figure>
+            <figure class="d-flex justify-center align-center">
+              <v-img max-width="200" src="@/assets/img/neuralnet.svg" />
+            </figure>
+            <figure class="d-flex justify-center align-center">
+              <StarsSection :score="2" :maxScore="3" :size="40" />
+            </figure>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
 </template>
 
@@ -81,12 +84,10 @@
  * Shows an overview of Carscore's purpose and development.
  */
 import ExtLink from "@/components/link/ExtLink";
+import StarsSection from "@/components/score/scoringIO/StarsSection";
 
 export default {
   name: "About",
-  components: { ExtLink },
+  components: { ExtLink, StarsSection },
 };
 </script>
-
- 
-
