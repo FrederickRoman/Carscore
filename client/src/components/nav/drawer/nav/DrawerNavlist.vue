@@ -1,14 +1,13 @@
 <template>
-  <v-list-item-group v-model="group">
-    <v-list-item v-for="item in items" :key="item.title" :to="item.link" link>
-      <v-list-item-icon>
-        <v-icon>{{ item.icon }}</v-icon>
-      </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-  </v-list-item-group>
+  <v-list v-model:selected="selectedItems" nav>
+    <v-list-item
+      v-for="item in items"
+      :key="item.title"
+      :to="item.link"
+      :prepend-icon="item.icon"
+      :title="item.title"
+    />
+  </v-list>
 </template>
 
 <script>
@@ -22,12 +21,12 @@ const NAV_ITEMS = Object.freeze([
 ]);
 
 export default {
-  data: () => ({ group: null }),
+  data: () => ({ selectedItems: [] }),
   watch: {
-    group(curState) {
-      if (curState !== null) {
+    selectedItems(curState) {
+      if (curState.length > 0) {
         this.$emit("set-drawer", false);
-        this.group = null;
+        this.selectedItems = [];
       }
     },
   },
@@ -36,4 +35,3 @@ export default {
   },
 };
 </script>
-

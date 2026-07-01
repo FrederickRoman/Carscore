@@ -1,10 +1,6 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import { createStore } from 'vuex';
 import scoring from './modules/scoring.js';
-Vue.use(Vuex);
 
-export const store = new Vuex.Store({
-    modules: {
-        scoring,
-    },
-})
+export const store = createStore({
+  modules: { scoring },
+});

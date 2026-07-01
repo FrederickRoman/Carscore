@@ -1,10 +1,10 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib/framework';
+import { createVuetify } from 'vuetify'
+import 'vuetify/styles'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
-import carscoreTheme from '@/themes/carscoreTheme'
-
-Vue.use(Vuetify);
-
-const vuetify = new Vuetify({ theme: carscoreTheme });
-
-export default vuetify;
+export default createVuetify({
+  components,
+  directives,
+  theme: { defaultTheme: 'dark' },
+})

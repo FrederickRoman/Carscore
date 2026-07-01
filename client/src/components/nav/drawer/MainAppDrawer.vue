@@ -1,8 +1,8 @@
 <template>
-  <v-navigation-drawer v-model="drawer" app bottom temporary>
+  <v-navigation-drawer v-model="drawer" temporary location="bottom">
     <DrawerBrandLi />
     <v-divider />
-    <DrawerNavList v-bind="$attrs" v-on="$listeners" />
+    <DrawerNavList v-bind="$attrs" />
   </v-navigation-drawer>
 </template>
 

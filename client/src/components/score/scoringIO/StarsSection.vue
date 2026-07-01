@@ -1,10 +1,9 @@
 <template>
   <v-rating
-    v-model="score"
-    dense
+    :model-value="score"
     readonly
-    color="yellow"
-    background-color="yellow lighten-3"
+    color="yellow-darken-2"
+    active-color="yellow"
     :size="size"
     :length="maxScore"
   />

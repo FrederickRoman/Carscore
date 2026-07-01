@@ -14,9 +14,9 @@
             :rules="RequireRule(entry.label)"
             :label="entry.label"
             :items="entry.items"
+            item-title="text"
             required
-            filled
-            outlined
+            variant="outlined"
           />
         </v-col>
       </v-row>

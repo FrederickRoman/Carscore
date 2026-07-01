@@ -1,12 +1,12 @@
 <template>
-  <v-parallax dark height="300" src="@/assets/img/hero-banner.webp">
-    <v-row align="center" justify="center">
+  <v-img height="300" cover src="@/assets/img/hero-banner.webp">
+    <v-row align="center" justify="center" class="fill-height">
       <v-col cols="12" class="text-center" id="carscore-main_header-container">
         <BannerHeader />
         <BannerSubheader />
       </v-col>
     </v-row>
-  </v-parallax>
+  </v-img>
 </template>
 
 <script>

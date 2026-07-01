@@ -2,9 +2,11 @@
   <v-app>
     <MainNav />
     <v-main>
-      <v-scroll-x-transition mode="out-in" :hide-on-leave="true">
-        <router-view />
-      </v-scroll-x-transition>
+      <router-view v-slot="{ Component }">
+        <v-scroll-x-transition mode="out-in" :hide-on-leave="true">
+          <component :is="Component" />
+        </v-scroll-x-transition>
+      </router-view>
     </v-main>
     <MainFooter />
   </v-app>

@@ -1,3 +1,8 @@
+const util = require('util');
+if (!util.isNullOrUndefined) {
+  util.isNullOrUndefined = (v) => v === null || v === undefined;
+}
+
 require('./process').monitor();
 const http = require('http');
 const app = require('./app');

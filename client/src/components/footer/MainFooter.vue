@@ -2,7 +2,7 @@
   <v-footer class="py-6 mt-6 d-flex justify-center align-center">
     <ExtLink href="https://frederickroman.com" class="text-decoration-none">
       <template #body>
-        <div class="white--text text-center">
+        <div class="text-white text-center">
           &copy; Frederick Roman {{ curYear }}
         </div>
       </template>

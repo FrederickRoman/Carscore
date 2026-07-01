@@ -10,6 +10,7 @@
     "server_dev": "cd server && nodemon ./server/server.js && cd ..",
     "server_train_nn": "cd server/api/services/scoring/neuralNet && node train && cd ../../../../..",
     "postinstall": "cd client && npm run build && cd ../server && npm run build && cd ..",
+    "dev": "concurrently --names \"client,server\" -c \"cyan,yellow\" \"npm run client_dev\" \"npm run server_dev\"",
     "start": "cd server && cross-env NODE_ENV=production npm run start && cd .."
   },
   "dependencies": {
@@ -34,7 +35,13 @@
     "not dead"
   ],
   "engines": {
-    "node": "14.x",
-    "npm": "7.x"
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "overrides": {
+    "cross-spawn": ">=7.0.6"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
   }
 }

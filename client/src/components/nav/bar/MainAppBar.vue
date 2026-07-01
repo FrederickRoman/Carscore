@@ -1,20 +1,20 @@
 <template>
-  <v-app-bar app>
+  <v-app-bar>
     <!-- Logo home button -->
     <router-link to="/" id="app-bar_home-link">
       <span class="d-flex">
-        <v-img
-          lazy-src="@/assets/img/carscoreLazyLogo.png"
-          max-height="40"
-          max-width="40"
+        <img
           src="@/assets/img/carscoreMetalLogo.svg"
+          width="40"
+          height="40"
+          alt="Carscore logo"
         />
-        <v-toolbar-title
+        <span
           class="carscore_brand-font"
           id="app-bar_home-link_title"
         >
           Carscore
-        </v-toolbar-title>
+        </span>
       </span>
     </router-link>
     <v-spacer />

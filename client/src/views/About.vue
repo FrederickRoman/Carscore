@@ -14,12 +14,12 @@
             Carscore is an
             <ExtLink
               href="https://github.com/FrederickRoman/Carscore"
-              class="white--text"
+              class="text-white"
             >
               <template #body> open source project </template>
             </ExtLink>
             that was created by
-            <ExtLink href="https://www.frederickroman.com" class="white--text">
+            <ExtLink href="https://www.frederickroman.com" class="text-white">
               <template #body> Frederick Roman. </template>
             </ExtLink>
           </p>
@@ -45,19 +45,19 @@
               The Carscore classifier itself is a
               <ExtLink
                 href="https://en.wikipedia.org/wiki/Feedforward_neural_network"
-                class="white--text"
+                class="text-white"
               >
                 <template #body>feedforward neural network </template>
               </ExtLink>
               that was trained on the
               <ExtLink
                 href="https://archive.ics.uci.edu/ml/datasets/car+evaluation"
-                class="white--text"
+                class="text-white"
               >
                 <template #body>UCI car evaluation dataset </template>
               </ExtLink>
               using the Machine Learning framework
-              <ExtLink href="https://www.tensorflow.org/" class="white--text">
+              <ExtLink href="https://www.tensorflow.org/" class="text-white">
                 <template #body>Tensorflow </template>.
               </ExtLink>
             </p>
